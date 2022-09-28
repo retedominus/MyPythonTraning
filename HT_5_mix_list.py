@@ -12,12 +12,12 @@ def shuffle_list(list):
             out.append(list[r_num])
     return out
 
-n = int(input(("Enter length of the list (<100): ")))
-ent = []
-for i in range(n):
-    ent.append(i)
-if n >= 100:
-    print("Error, invalid length entered")
-else:
-    print(ent)
-    print(shuffle_list(ent))
+def create_list(x):
+    ent = []
+    for i in range(n):
+        ent.append(i)
+    return ent
+
+n = int(input(("Enter length of the list: ")))
+print(create_list(n))
+print(shuffle_list(create_list(n)))
