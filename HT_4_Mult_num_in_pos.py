@@ -7,4 +7,7 @@ pos_2 = int(input("Enter position two: "))
 list = []
 for i in range(n * -1, n + 1):
     list.append(i)
-print(list[pos_1 - 1] * list[pos_2 - 1])
+if pos_1 > len(list) or pos_1 <= 0 or pos_2 > len(list) or pos_2 <= 0:
+    print("Error, entered position is out of range")
+else:
+    print(list[pos_1 - 1] * list[pos_2 - 1])
