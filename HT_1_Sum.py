@@ -8,3 +8,6 @@ for i in range(count):
     summ += num % 10
     num //= 10
 print(round(summ))
+
+#print(sum(map(int, list(input("Введите дробное число: ").replace(".", "").replace(",", ""))))
+#запрещенный способ))
