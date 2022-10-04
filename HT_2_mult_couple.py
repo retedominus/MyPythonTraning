@@ -3,7 +3,11 @@
 from random import sample  # не стоит ли вызов прописывать в функции?
 
 
-def create_ls(length):
+def create_ls(length: int):
+    if length < 0:
+        print("Incorrect value is entered!")
+        return []
+
     ls = sample(range(length * 2), length)
     return ls
 
