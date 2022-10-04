@@ -5,9 +5,8 @@
 def dec_to_bin(num):
     ls = []
     while num > 0:
-        prod = round(num % 2)
+        ls.append(num % 2)
         num = num // 2
-        ls.append(prod)
     ls.reverse()
     return ls
 
