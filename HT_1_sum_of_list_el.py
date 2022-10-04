@@ -22,3 +22,4 @@ def summa(x):
 ls_output = create_list(int(input("Enter the length of the list: ")))
 print(ls_output)
 print(summa(ls_output))
+
