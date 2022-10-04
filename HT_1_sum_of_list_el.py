@@ -10,7 +10,6 @@ def create_list(length):
 
 def summa(x):
     res = 0
-    index = 0
     for i in range(0, len(x) - 1, 2):
         res += x[i]
     return res
