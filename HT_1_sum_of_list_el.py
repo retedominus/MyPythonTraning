@@ -3,14 +3,18 @@
 from random import sample
 
 
-def create_list(length):
-    ls = sample(range(length * 2), length)
-    return ls
+def create_list(length: int):
+    if length < 0:
+        print("Incorrect value is entered!")
+        return []
+    else:
+        ls = sample(range(length * 2), length)
+        return ls
 
 
 def summa(x):
     res = 0
-    for i in range(0, len(x) - 1, 2):
+    for i in range(0, len(x), 2):
         res += x[i]
     return res
 
