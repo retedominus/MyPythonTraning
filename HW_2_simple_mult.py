@@ -12,3 +12,4 @@ def smpl_mult(num):
 
 
 print(smpl_mult(int(input("Enter the number: "))))
+
