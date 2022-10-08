@@ -7,7 +7,7 @@ def poly(k):
     for i in range(k, 0, -1):
         coe = random.randrange(0, 10)
         op = random.choice(['+', '-'])
-        if not coe == 0:
+        if coe:
             strng += f'{coe}*x^{i}{op}'
     strng += f'{coe} = 0'
     return strng
