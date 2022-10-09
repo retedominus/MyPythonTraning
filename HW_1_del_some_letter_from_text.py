@@ -13,10 +13,7 @@ def create_str(num: int, word: str = 'абв'):
 
 
 def del_word(text: str):
-    if "абв " in text:
-        text.replace("абв ", "")
-
-    return text.replace(" абв", "")
+    return text.replace("абв ", "")
 
 
 res = del_word(create_str(int(input("Enter the number of words: "))))
