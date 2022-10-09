@@ -3,6 +3,8 @@ from random import sample
 
 
 def create_str(num: int, word: str = 'абв'):
+    if num <= 0:
+        print("Data is incorrect. Try again.")
     st = []
     for i in range(num):
         one_piece = sample(word, 3)
@@ -10,11 +12,13 @@ def create_str(num: int, word: str = 'абв'):
     return " ".join(st)
 
 
-def del_word(strn: str):
-    return strn.replace(" абв", "")
+def del_word(text: str):
+    if "абв " in text:
+        text.replace("абв ", "")
+
+    return text.replace(" абв", "")
 
 
-res = create_str(int(input("Enter the number of words: ")))
+res = del_word(create_str(int(input("Enter the number of words: "))))
 
 print(res)
-
