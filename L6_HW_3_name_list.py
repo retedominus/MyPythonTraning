@@ -14,3 +14,15 @@ def names_dict(*st):
 
 print(names_dict("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"))
 
+
+#
+# from itertools import groupby
+#
+#
+# def thesaurus(*args):
+#     if "" not in args:
+#         return {ch: list(names) for ch, names in groupby(sorted(args), key=lambda i: i[0]) if ch}
+#     return "Error"
+#
+#
+# print(thesaurus("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"))
