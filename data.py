@@ -6,7 +6,7 @@ from os import path
 
 def create_pb(f_name: str):
     if not path.exists(f_name):
-        load_data = [input("Введите имя контакта: \n"), input("Введите номер телефона: \n")]
+        load_data = [input("Введите имя контакта: \n".lower().capitalize()), input("Введите номер телефона: \n")]
         with open(f_name, 'a', encoding="utf-8") as file:
             if 'csv' in f_name:
                 writer = csv.writer(file)
@@ -30,7 +30,7 @@ def is_phone_book_exist():
 
 def new_write_pb(file_name: str):
     if path.exists(file_name):
-        pers_name = input("Введите имя контакта: ")
+        pers_name = input("Введите имя контакта: ".lower().capitalize())
         ph_num = input("Введите номер телефона: ")
         data = [pers_name, ph_num]
         with open(file_name, 'a', encoding="utf-8") as file:
@@ -110,7 +110,7 @@ def clear_pb(file_name):
 
 def search_pb(file_name):
     if path.exists(file_name):
-        value = input('\nВведите имя контакта: \n')
+        value = input('\nВведите имя контакта: \n'.lower().capitalize())
         counter = 0
         with open(file_name, 'r') as file:
             reader = csv.reader(file)
