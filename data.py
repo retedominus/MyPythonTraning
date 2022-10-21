@@ -1,5 +1,4 @@
 import csv
-import json
 import glob
 from os import path
 

@@ -37,7 +37,7 @@ def get_choice_pbook(menu):
     answer = input('\nВыберите телефонную книгу\n')
     while not answer.isdigit() or int(answer) not in menu.keys():
         print("\nОшибка ввода. Попробуйте снова.")
-        get_user_choice(menu)
+        get_choice_pbook(menu)
     return int(answer)
 
 
