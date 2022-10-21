@@ -63,7 +63,9 @@ def edit_rec(file_name):
         print("\nНет такой записи\n")
 
 
-def ask_edit_return(r_row: list):
+def ask_edit_return(r_row):
+    if type(r_row) == str:
+        r_row = list(r_row.split())
     answer = int(input("\nЧто изменить:\n1 - Имя\n2 - Номер телефона\n3 - Выход\n"))
     match answer:
         case 1:
