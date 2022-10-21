@@ -39,5 +39,3 @@ def get_choice_pbook(menu):
         print("\nОшибка ввода. Попробуйте снова.")
         answer = input('\nВыберите телефонную книгу\n')
     return int(answer)
-
-

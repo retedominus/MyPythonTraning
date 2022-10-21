@@ -5,7 +5,7 @@ from os import path
 
 def create_pb(f_name: str):
     if not path.exists(f_name):
-        load_data = [input("Введите имя контакта: \n".lower().capitalize()), input("Введите номер телефона: \n")]
+        load_data = [input("Введите имя контакта: \n").lower().capitalize(), input("Введите номер телефона: \n")]
         with open(f_name, 'a', encoding="utf-8") as file:
             if 'csv' in f_name:
                 writer = csv.writer(file)
@@ -29,7 +29,7 @@ def is_phone_book_exist():
 
 def new_write_pb(file_name: str):
     if path.exists(file_name):
-        pers_name = input("Введите имя контакта: ".lower().capitalize())
+        pers_name = input("Введите имя контакта: ").lower().capitalize()
         ph_num = input("Введите номер телефона: ")
         data = [pers_name, ph_num]
         with open(file_name, 'a', encoding="utf-8") as file:
@@ -44,7 +44,7 @@ def new_write_pb(file_name: str):
 
 
 def edit_rec(file_name):
-    name = input('\nВведите имя контакта: \n'.lower().capitalize())
+    name = input('Введите имя контакта:\n').lower().capitalize()
     temp_list = []
     match_found = 0
     with open(file_name) as file:
@@ -68,7 +68,7 @@ def ask_edit_return(r_row: list):
     match answer:
         case 1:
             r_row.pop(answer - 1)
-            r_row.insert(answer - 1, input("\nВведите новое имя контакта: \n".lower().capitalize()))
+            r_row.insert(answer - 1, input("\nВведите новое имя контакта: \n").lower().capitalize())
             return r_row
         case 2:
             r_row.pop(answer - 1)
@@ -109,7 +109,8 @@ def clear_pb(file_name):
 
 def search_pb(file_name):
     if path.exists(file_name):
-        value = input('\nВведите имя контакта: \n'.lower().capitalize())
+        value = input('Введите имя контакта: \n').lower().capitalize()
+        print(value)
         counter = 0
         with open(file_name, 'r') as file:
             reader = csv.reader(file)
